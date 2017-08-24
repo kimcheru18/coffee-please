@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+</head>
 
 <body>
     <header role="banner">
-        <h1 id="coffee-header"><img src="" alt="">"Kaffee bitte" ~ "Un café s'il vous plaît"  ~ "Coffee please" ~ "Café por favor" ~ "Vui lòng cho tôi cafe" ~ "Caffè per favore"</h1>
+        <h1 id="coffee-header"><img src="germany.png" alt="">"Kaffee bitte" ~ "Un café s'il vous plaît" ~ "Coffee please" ~ "Café por favor" ~ "Vui lòng cho tôi cafe" ~ "Caffè per favore"</h1>
     </header>
     <main>
-        <section id="coffee-selection">
-           <input type="radio" name="radio" id="radio">
-            <div class="js-coffee-image coffee-image">Image</div>
-            <div class="js-coffee-name coffee-name">Name</div>
-            <div class="js-coffee-description coffee-description">Description</div>
-            <div class="js-coffee-location coffee-location">Location</div>
-            <div class="js-coffee-details coffee-details">Details</div>
-<!--            <div class="js-coffee-image coffee-image">Image</div>-->
+        <section id="coffee-selection-wrapper">
+            <ul>
+                <li>
+                    <input type="radio" name="radio" class="radio" value="0" />
+                    <div class="coffee-image"><img src="images/affogato.jpg" alt=""></div>
+                    <div class="coffee-name">Name</div>
+                    <div class="coffee-description">Description</div>
+                    <div class="coffee-location">Location</div>
+                    <div class="coffee-details">Details</div>
+                </li>
+            </ul>
         </section>
 
         <section id="wiki-search">
@@ -27,10 +31,10 @@
             <button class="click-here">Click Here</button>
         </section>
 
-        <section id="js-maps maps"></section>
+        <section id="maps maps"></section>
 
-        <script src="//code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-        <script src="apps.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
     </main>
 </body>
 

@@ -8,7 +8,7 @@ var coffeeArray = [
         coffeeDescription: 'An affogato (Italian, "drowned") is a coffee-based beverage. It usually takes the form of a scoop of vanilla gelato or ice cream topped with a shot of hot espresso. Some variations also include a shot of Amaretto or other liqueur.',
         coffeeLocation: 'Italy',
         coffeeDetails: "",
-        coffeeImage: 'affagato.jpg'
+        coffeeImage: 'affogato.jpg'
 
     },
 
@@ -43,7 +43,7 @@ var coffeeArray = [
     //Coffee 5
     {
         coffeeName: 'CAFÉ AU LAIT',
-        coffeeDescription: 'Café au lait is a French coffee drink and consists of strong or bold coffee (sometimes espresso) mixed with scalded milk in approximately a 1:1 ratio.',
+        coffeeDescription: 'Café au lait is a French/European coffee drink and consists of strong or bold coffee (sometimes espresso) mixed with scalded milk in approximately a 1:1 ratio.',
         coffeeLocation: 'Europe',
         coffeeDetails: "",
         coffeeImage: 'cafeaulait.jpg'
@@ -91,10 +91,19 @@ var coffeeArray = [
         coffeeDescription: 'At its simplest, Ca phe sua da is made with finely ground Vietnamese-grown dark roast coffee individually brewed with a small metal French drip filter (cà phê phin) into a cup containing about a quarter to a half as much sweetened condensed milk, stirred and poured over ice.',
         coffeeLocation: 'Vietnam',
         coffeeDetails: "",
-        coffeeImage: 'vietnamese_coffee'
+        coffeeImage: 'vietnamese_coffee.jpg'
     },
 
     //Coffee 12
+    {
+        coffeeName: 'CARAJILLO',
+        coffeeDescription: 'Carajillo is a Spanish drink combining coffee with brandy or rum. There are many different ways of making a carajillo, ranging from black coffee with the spirit simply poured in to heating the spirit with lemon, sugar and cinnamon and adding the coffee last.',
+        coffeeLocation: 'Spain',
+        coffeeDetails: "",
+        coffeeImage: 'carajillo.jpg'
+    },
+
+    //Coffee 13
     {
         coffeeName: 'EISKAFFEE',
         coffeeDescription: 'Eiskaffee is German for ice-cream coffee. It consists of strong, chilled coffee, milk, and ice cream, usually vanilla.',
@@ -109,7 +118,7 @@ var coffeeArray = [
         coffeeDescription: 'Galão is a hot coffee drink from Portugal made of espresso and foamed milk. It comes in a tall glass with about one quarter coffee, three quarters foamed milk, as opposed to the smaller garoto that is served in a demitasse/espresso smaller china cup.',
         coffeeLocation: 'Portugal',
         coffeeDetails: "",
-        coffeeImage: 'domes_sevilha_galao'
+        coffeeImage: 'domes_sevilha_galao.jpg'
     },
 
     //Coffee 14
@@ -155,7 +164,7 @@ var coffeeArray = [
         coffeeDescription: 'Turkish Coffee is coffee prepared by boiling very finely powdered roast coffee beans two or three times in a pot (cezve), possibly with sugar, and serving it into a cup, where the dregs settle. The coffee has a foam on top, rather like the crema on espresso, and the more foam produced, the better the coffee is considered to be.',
         coffeeLocation: 'Middle East, North Africa, Caucasus, and the Balkans',
         coffeeDetails: "",
-        coffeeImage: 'turkish_coffee.jpg'
+        coffeeImage: 'turkishcoffee.jpg'
     },
 
     //Coffee 19
@@ -176,3 +185,30 @@ var coffeeArray = [
         coffeeImage: 'yuanyang.jpg'
     },
 ];
+
+
+function displayCoffeeTypes(coffeeArray) {
+    var buildTheHtmlOutput = "";
+    $.each(coffeeArray, function (coffeeArrayKey, coffeeArrayValue) {
+        buildTheHtmlOutput += "<li>";
+        buildTheHtmlOutput += '<div class="coffee-image" style="background-image: url(images/' + coffeeArrayValue.coffeeImage + ')"></div>';
+        buildTheHtmlOutput += '<div class="coffee-name">';
+        buildTheHtmlOutput += '<input type="radio" name="radio" class="radio" value="' + coffeeArrayKey + '" />';
+        buildTheHtmlOutput += coffeeArrayValue.coffeeName;
+        buildTheHtmlOutput += '</div>';
+        buildTheHtmlOutput += '<div class="coffee-description">' + coffeeArrayValue.coffeeDescription + '</div>';
+        buildTheHtmlOutput += '<div class="coffee-location">' + coffeeArrayValue.coffeeLocation + '</div>';
+        if (coffeeArrayValue.coffeeDetails.length != 0) {
+            buildTheHtmlOutput += '<div class="coffee-details">' + coffeeArrayValue.coffeeDetails + '</div>';
+        }
+        buildTheHtmlOutput += "</li>";
+    });
+    $("#coffee-selection-wrapper ul").html(buildTheHtmlOutput);
+}
+
+
+//STEP 2 using the objects and functions (triggers)
+
+$(document).ready(function () {
+    displayCoffeeTypes(coffeeArray);
+});
