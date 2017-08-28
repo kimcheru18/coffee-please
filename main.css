@@ -64,7 +64,6 @@ General styles (General Module, wrapping around the modules bellow)
 */
 
 body {
-    font-family: 'Arial', cursive;
     background: -webkit-linear-gradient(left, orange, white);
 }
 
@@ -75,10 +74,10 @@ Header styles (Main Module)
 */
 
 #coffee-header {
+    font-family: 'Cinzel Decorative', cursive;
     font-size: 1.5rem;
     text-align: center;
-    padding-top: 30px;
-    font-family: 'Cinzel Decorative', cursive;
+    padding: 30px 0;
 }
 
 
@@ -86,6 +85,12 @@ Header styles (Main Module)
 Content styles (Main Module)
 (all the styles inside the < sections > or < aside > tags)
 */
+
+main .intro {
+    text-align: center;
+    font-family: 'Marck Script', cursive;
+    font-size: 2rem;
+}
 
 #coffee-selection-wrapper {
     width: 60%;
@@ -106,11 +111,6 @@ Content styles (Main Module)
 
 .radio {
     transform: scale(2);
-    /*    float: left;*/
-    /*
-    margin-left: 15px;margin-top: 90px;
-margin-bottom: 90px;
-*/
     margin-right: 1rem;
     background-color: aliceblue;
 }
@@ -119,16 +119,33 @@ margin-bottom: 90px;
 .coffee-description,
 .coffee-location,
 .coffee-details {
-    /*        text-align: center;*/
     margin-top: 5px;
     padding: 10px 0;
+}
+
+.coffee-description,
+.coffee-location,
+.coffee-details {
+    font-family: 'Marck Script', cursive;
+}
+
+.coffee-description {
+    font-size: 1.4rem;
+}
+
+.coffee-location {
+    font-size: 1.75rem;
+}
+
+.coffee-name {
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bold;
 }
 
 .coffee-image {
     float: right;
     width: 40%;
     height: 200px;
-    /*    border: 1px solid black;*/
     margin: 5px;
     margin-left: 1rem;
     background-size: cover;
@@ -168,6 +185,22 @@ margin-bottom: 90px;
 Footer styles (Main Module)
 (all the styles inside the < footer > tag)
 */
+
+footer {
+    font-family: 'Marck Script', cursive;
+    text-align: center;
+    margin-top: 75px;
+    padding-bottom: 30px;
+}
+
+footer p {
+    font-size: 1.5rem;
+}
+
+footer a {
+    color: brown;
+    text-decoration: none;
+}
 
 
 /* -------------------------------------

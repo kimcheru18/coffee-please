@@ -88,7 +88,7 @@ var coffeeArray = [
     //Coffee 11
     {
         coffeeName: 'CA PHE SUA DA',
-        coffeeDescription: 'At its simplest, Ca phe sua da is made with finely ground Vietnamese-grown dark roast coffee individually brewed with a small metal French drip filter (cà phê phin) into a cup containing about a quarter to a half as much sweetened condensed milk, stirred and poured over ice.',
+        coffeeDescription: 'Ca phe sua da is made with finely ground Vietnamese-grown dark roast coffee individually brewed with a small metal French drip filter (cà phê phin) into a cup containing about a quarter to a half as much sweetened condensed milk, stirred and poured over ice.',
         coffeeLocation: 'Vietnam',
         coffeeDetails: "",
         coffeeImage: 'vietnamese_coffee.jpg'
@@ -97,7 +97,7 @@ var coffeeArray = [
     //Coffee 12
     {
         coffeeName: 'CARAJILLO',
-        coffeeDescription: 'Carajillo is a Spanish drink combining coffee with brandy or rum. There are many different ways of making a carajillo, ranging from black coffee with the spirit simply poured in to heating the spirit with lemon, sugar and cinnamon and adding the coffee last.',
+        coffeeDescription: 'Carajillo is a Spanish drink combining coffee with brandy or rum. You can make it with black coffee with the spirit simply poured in or heating the spirit with lemon, sugar and cinnamon then adding the coffee last.',
         coffeeLocation: 'Spain',
         coffeeDetails: "",
         coffeeImage: 'carajillo.jpg'
@@ -115,7 +115,7 @@ var coffeeArray = [
     //Coffee 13
     {
         coffeeName: 'GALAO',
-        coffeeDescription: 'Galão is a hot coffee drink from Portugal made of espresso and foamed milk. It comes in a tall glass with about one quarter coffee, three quarters foamed milk, as opposed to the smaller garoto that is served in a demitasse/espresso smaller china cup.',
+        coffeeDescription: 'Galão is a hot coffee drink from Portugal made of espresso and foamed milk. It comes in a tall glass with about one quarter coffee, three quarters foamed milk.',
         coffeeLocation: 'Portugal',
         coffeeDetails: "",
         coffeeImage: 'domes_sevilha_galao.jpg'
@@ -161,7 +161,7 @@ var coffeeArray = [
     //Coffee 18
     {
         coffeeName: 'TURKISH COFFEE',
-        coffeeDescription: 'Turkish Coffee is coffee prepared by boiling very finely powdered roast coffee beans two or three times in a pot (cezve), possibly with sugar, and serving it into a cup, where the dregs settle. The coffee has a foam on top, rather like the crema on espresso, and the more foam produced, the better the coffee is considered to be.',
+        coffeeDescription: 'Turkish Coffee prepared by boiling very finely powdered roast coffee beans two or three times in a pot (cezve), possibly with sugar, and serving it into a cup, where the dregs settle. It has a foam on top, similar to the crema on espresso.',
         coffeeLocation: 'Middle East, North Africa, Caucasus, and the Balkans',
         coffeeDetails: "",
         coffeeImage: 'turkishcoffee.jpg'
@@ -170,7 +170,7 @@ var coffeeArray = [
     //Coffee 19
     {
         coffeeName: 'VIENNA COFFEE',
-        coffeeDescription: 'Vienna Coffee is the name of a popular traditional cream-based coffee beverage. It is made by preparing two shots of strong black espresso in a standard sized coffee cup and infusing the coffee with whipped cream (as a replacement for milk and sugar) until the cup is full. Then the cream is twirled and optionally topped off with chocolate sprinklings. The coffee is drunk through the creamy top.',
+        coffeeDescription: 'Vienna Coffee is made by preparing two shots of strong black espresso and infusing the coffee with whipped cream until the cup is full. Then the cream is twirled and topped off with chocolate sprinklings. It is drunk through the creamy top.',
         coffeeLocation: 'Vienna',
         coffeeDetails: "",
         coffeeImage: 'vienna.jpg'
