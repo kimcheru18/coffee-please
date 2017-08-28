@@ -80,6 +80,13 @@ Header styles (Main Module)
     padding: 30px 0;
 }
 
+.header-flag-images {
+    height: 29px;
+    margin-left: 1rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+
 
 /* -------------------------------------
 Content styles (Main Module)
@@ -178,6 +185,26 @@ main .intro {
     border-radius: 10px;
     padding: 7px;
     margin-top: 10px;
+}
+
+
+/*jquery pop-up styles*/
+
+#slide_background {
+    transition: all 0.3s 0.3s;
+}
+
+#slide,
+#slide_wrapper {
+    transition: all 0.3s ease-out;
+}
+
+#slide {
+    transform: translateX(0) translateY(-40%);
+}
+
+.popup_visible #slide {
+    transform: translateX(0) translateY(0);
 }
 
 
