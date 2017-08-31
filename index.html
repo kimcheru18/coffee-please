@@ -6,18 +6,20 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+    <!--    bootstrap for the overlay-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <header role="banner">
         <h1 id="coffee-header">
-            <img src="flag_images/germany.jpg" class="header-flag-images" lt=" ">"Kaffee bitte "
-            <img src="flag_images/french.jpg" class="header-flag-images" lt=" ">"Un café s 'il vous plaît"
-            <img src="flag_images/united_states.jpg" class="header-flag-images" lt=" ">"Coffee please"
-            <img src="flag_images/spain.jpg" class="header-flag-images" lt=" ">"Café por favor"
-            <img src="flag_images/vietnam.jpg" class="header-flag-images" lt=" ">"Vui lòng cho tôi cafe"
-            <img src="flag_images/italy.jpg" class="header-flag-images" lt=" ">"Caffè per favore"
+            <img src="flag_images/germany.jpg" class="header-flag-images" alt="german flag">"Kaffee bitte "
+            <img src="flag_images/french.jpg" class="header-flag-images" alt="french flag">"Un café s 'il vous plaît"
+            <img src="flag_images/united_states.jpg" class="header-flag-images" alt="united states flag">"Coffee please"
+            <img src="flag_images/spain.jpg" class="header-flag-images" alt="spainish flag">"Café por favor"
+            <img src="flag_images/vietnam.jpg" class="header-flag-images" alt="vietnamese flag">"Vui lòng cho tôi cafe"
+            <img src="flag_images/italy.jpg" class="header-flag-images" alt="italian flag">"Caffè per favore"
         </h1>
     </header>
 
@@ -25,72 +27,25 @@
     <main>
 
         <!-- Add an optional button to open the popup -->
-        <button class="initialism slide_open btn btn-success">Slide</button>
+        <!--        <button class="initialism slide_open btn btn-success">Slide</button>-->
 
         <!-- Add content to the popup -->
 
         <!-- Slide in -->
+        <section class="slides-wrapper">
+            <div id="slide" class="well">
+                <h4>Slide in example</h4>
+                <p class="google-map">
+                </p>
+                <p class="wiki-history"></p>
+                <p class="youtube-tutorial"></p>
 
-        <div id="slide" class="well">
-            <h4>Slide in example</h4>
-            <pre class="prettyprint">
-<code>$('#slide ').popup({
-  outline: true, // optional
-  focusdelay: 400, // optional
-  vertical: 'top ' //optional
-});
-</code>
-</pre>
-            <pre class="prettyprint">
-<code>#slide_background {
-  transition: all 0.3s 0.3s;
-}
-#slide,
-#slide_wrapper {
-  transition: all 0.3s ease-out;
-}
-#slide {
-  transform: translateX(0) translateY(-40%);
-}
-.popup_visible #slide {
-  transform: translateX(0) translateY(0);
-}
-</code>
-</pre>
-            <button class="slide_close standalone_open btn btn-default">Next example</button>
-            <button class="slide_close btn btn-default">Close</button>
-        </div>
-
-
-        <style>
-            #slide_background {
-                -webkit-transition: all 0.3s 0.3s;
-                -moz-transition: all 0.3s 0.3s;
-                transition: all 0.3s 0.3s;
-            }
-
-            #slide,
-            #slide_wrapper {
-                -webkit-transition: all 0.4s;
-                -moz-transition: all 0.4s;
-                transition: all 0.4s;
-            }
-
-            #slide {
-                -webkit-transform: translateX(0) translateY(-40%);
-                -moz-transform: translateX(0) translateY(-40%);
-                -ms-transform: translateX(0) translateY(-40%);
-                transform: translateX(0) translateY(-40%);
-            }
-
-            .popup_visible #slide {
-                -webkit-transform: translateX(0) translateY(0);
-                -moz-transform: translateX(0) translateY(0);
-                -ms-transform: translateX(0) translateY(0);
-                transform: translateX(0) translateY(0);
-            }
-
-        </style>
+                <div class="google-map-wrapper"></div>
+                <div class="wiki-wrapper"></div>
+                <div class="youtube-wrapper"></div>
+                <button class="slide_close btn btn-default">Try another one</button>
+            </div>
+        </section>
 
         <section class="intro">
             <p class="specialty-coffee">Choose the specialty coffee you desire, find out how it's made, where you can find it and the history behind it.</p>
@@ -99,7 +54,7 @@
         <section id="coffee-selection-wrapper">
             <ul>
                 <li>
-                    <input type="radio" name="radio" class="radio" value="0" />
+                    <!--                    <input type="radio" name="radio" class="radio" value="0" />-->
                     <div class="coffee-image"><img src="images/affogato.jpg" alt=""></div>
                     <div class="coffee-name">Name</div>
                     <div class="coffee-description">Description</div>
@@ -109,10 +64,12 @@
             </ul>
         </section>
 
+        <!--
         <section id="wiki-search">
             <h3>For more information on this coffee</h3>
-            <button class="click-here">Click Here</button>
+            <button class="click-here">Try another one</button>
         </section>
+-->
 
         <section id="maps maps"></section>
 
@@ -129,23 +86,10 @@
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!--    bootstrap for the overlay-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Include jQuery Popup Overlay -->
     <script src="jquery-popup-overlay/jquery.popupoverlay.js"></script>
-
-
-    <script>
-        $(document).ready(function() {
-
-            $('#slide').popup({
-                focusdelay: 400,
-                outline: true,
-                vertical: 'top'
-            });
-
-        });
-
-    </script>
-
 
     <script src="app.js"></script>
 

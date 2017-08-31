@@ -16,7 +16,7 @@ var coffeeArray = [
     {
         coffeeName: 'AMERICANO',
         coffeeDescription: 'This drink consists of a single or double-shot of espresso combined with up to four or five ounces of hot water in a two-demitasse cup.',
-        coffeeLocation: 'America',
+        coffeeLocation: 'United States',
         coffeeDetails: "",
         coffeeImage: 'americano.jpg'
 
@@ -35,7 +35,7 @@ var coffeeArray = [
     {
         coffeeName: 'BREVE',
         coffeeDescription: 'Caffe Breve is an American variation of a latte: a milk-based espresso drink using steamed half-and-half mixture of milk and cream instead of milk.',
-        coffeeLocation: 'America',
+        coffeeLocation: 'United States',
         coffeeDetails: "",
         coffeeImage: 'caffe_breve.jpg'
     },
@@ -190,10 +190,10 @@ var coffeeArray = [
 function displayCoffeeTypes(coffeeArray) {
     var buildTheHtmlOutput = "";
     $.each(coffeeArray, function (coffeeArrayKey, coffeeArrayValue) {
-        buildTheHtmlOutput += "<li>";
+        buildTheHtmlOutput += "<li class='slide_open' onclick=updateSlideContent('" + coffeeArrayValue.coffeeName + '-' + coffeeArrayValue.coffeeLocation + "')>";
         buildTheHtmlOutput += '<div class="coffee-image" style="background-image: url(images/' + coffeeArrayValue.coffeeImage + ')"></div>';
         buildTheHtmlOutput += '<div class="coffee-name">';
-        buildTheHtmlOutput += '<input type="radio" name="radio" class="radio" value="' + coffeeArrayKey + '" />';
+        //        buildTheHtmlOutput += '<input type="radio" name="radio" class="radio" value="' + coffeeArrayKey + '" />';
         buildTheHtmlOutput += coffeeArrayValue.coffeeName;
         buildTheHtmlOutput += '</div>';
         buildTheHtmlOutput += '<div class="coffee-description">' + coffeeArrayValue.coffeeDescription + '</div>';
@@ -206,9 +206,46 @@ function displayCoffeeTypes(coffeeArray) {
     $("#coffee-selection-wrapper ul").html(buildTheHtmlOutput);
 }
 
+function updateSlideContent(coffeeDetails) {
+    var oneDetail = coffeeDetails.split("-");
+
+
+    //    alert("here");
+
+    //    var buildTheSlisdeOutput = "";
+    //    $.each(coffeeArray, function (coffeeArrayKey, coffeeArrayValue) {
+
+    //        buildTheSlideOutput += "<li class='slide_open' onclick=updateSlideContent('" + coffeeArrayValue.coffeeName + "')>";
+    //        buildTheSlideOutput += '<div class="coffee-image" style="background-image: url(images/' + coffeeArrayValue.coffeeImage + ')"></div>';
+    //        buildTheSlideOutput += '<div class="coffee-name">';
+    //        //        buildTheHtmlOutput += '<input type="radio" name="radio" class="radio" value="' + coffeeArrayKey + '" />';
+    //        buildTheSlideOutput += coffeeArrayValue.coffeeName;
+    //        buildTheSlideOutput += '</div>';
+    //        buildTheSlideOutput += '<div class="coffee-description">' + coffeeArrayValue.coffeeDescription + '</div>';
+    //        buildTheSlideOutput += '<div class="coffee-location">' + coffeeArrayValue.coffeeLocation + '</div>';
+    //        buildTheSlideOutput += "</li>";
+    //    });
+    //    $("#slide h4").html(buildTheSlideOutput);
+    var mapOutput = '<iframe     width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDlI_svxqzPA4F944kcyUEnC6-roh51lfc &q=' + oneDetail[1] + '" allowfullscreen></iframe>';
+    //    var wikiOutput = '<iframe width="600" height="450" frameborder="0" style="border:0" src="https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json=' + ?????????+ '" allowfullscreen></iframe>';
+    var youtubeOutput = ''
+    $("#slide h4").html(oneDetail[0]);
+    $("#slide p.google-map").html(oneDetail[1]);
+    //    $("#slide p.wiki-history").html(??????);
+    $("#slide .google-map-wrapper").html(mapOutput);
+    $("#slide .wiki-wrapper").html(wikiOutput);
+    $("#slide .youtube-wrapper").html(youtubeOutput);
+}
+
 
 //STEP 2 using the objects and functions (triggers)
 
 $(document).ready(function () {
+
+    $('#slide').popup({
+        focusdelay: 400,
+        outline: true,
+        vertical: 'top'
+    });
     displayCoffeeTypes(coffeeArray);
 });
