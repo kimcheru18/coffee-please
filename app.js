@@ -186,6 +186,7 @@ var coffeeArray = [
     },
 ];
 
+//step 2. dynamically created layout to display coffee and coffee details.
 
 function displayCoffeeTypes(coffeeArray) {
     var buildTheHtmlOutput = "";
@@ -193,7 +194,6 @@ function displayCoffeeTypes(coffeeArray) {
         buildTheHtmlOutput += "<li class='slide_open' onclick=updateSlideContent('" + coffeeArrayValue.coffeeName + '-' + coffeeArrayValue.coffeeLocation + "')>";
         buildTheHtmlOutput += '<div class="coffee-image" style="background-image: url(images/' + coffeeArrayValue.coffeeImage + ')"></div>';
         buildTheHtmlOutput += '<div class="coffee-name">';
-        //        buildTheHtmlOutput += '<input type="radio" name="radio" class="radio" value="' + coffeeArrayKey + '" />';
         buildTheHtmlOutput += coffeeArrayValue.coffeeName;
         buildTheHtmlOutput += '</div>';
         buildTheHtmlOutput += '<div class="coffee-description">' + coffeeArrayValue.coffeeDescription + '</div>';
@@ -206,35 +206,59 @@ function displayCoffeeTypes(coffeeArray) {
     $("#coffee-selection-wrapper ul").html(buildTheHtmlOutput);
 }
 
+//step 3. dynamically created layout to display overlay
+
 function updateSlideContent(coffeeDetails) {
     var oneDetail = coffeeDetails.split("-");
 
-
-    //    alert("here");
-
-    //    var buildTheSlisdeOutput = "";
-    //    $.each(coffeeArray, function (coffeeArrayKey, coffeeArrayValue) {
-
-    //        buildTheSlideOutput += "<li class='slide_open' onclick=updateSlideContent('" + coffeeArrayValue.coffeeName + "')>";
-    //        buildTheSlideOutput += '<div class="coffee-image" style="background-image: url(images/' + coffeeArrayValue.coffeeImage + ')"></div>';
-    //        buildTheSlideOutput += '<div class="coffee-name">';
-    //        //        buildTheHtmlOutput += '<input type="radio" name="radio" class="radio" value="' + coffeeArrayKey + '" />';
-    //        buildTheSlideOutput += coffeeArrayValue.coffeeName;
-    //        buildTheSlideOutput += '</div>';
-    //        buildTheSlideOutput += '<div class="coffee-description">' + coffeeArrayValue.coffeeDescription + '</div>';
-    //        buildTheSlideOutput += '<div class="coffee-location">' + coffeeArrayValue.coffeeLocation + '</div>';
-    //        buildTheSlideOutput += "</li>";
-    //    });
-    //    $("#slide h4").html(buildTheSlideOutput);
-    var mapOutput = '<iframe     width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDlI_svxqzPA4F944kcyUEnC6-roh51lfc &q=' + oneDetail[1] + '" allowfullscreen></iframe>';
-    //    var wikiOutput = '<iframe width="600" height="450" frameborder="0" style="border:0" src="https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json=' + ?????????+ '" allowfullscreen></iframe>';
-    var youtubeOutput = ''
+    //display general data
     $("#slide h4").html(oneDetail[0]);
     $("#slide p.google-map").html(oneDetail[1]);
-    //    $("#slide p.wiki-history").html(??????);
+
+    //display the map data
+    var mapOutput = '<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDlI_svxqzPA4F944kcyUEnC6-roh51lfc &q=' + oneDetail[1] + '" allowfullscreen></iframe>';
     $("#slide .google-map-wrapper").html(mapOutput);
-    $("#slide .wiki-wrapper").html(wikiOutput);
-    $("#slide .youtube-wrapper").html(youtubeOutput);
+
+    //    display wikipedia data
+    //    $("#slide .wiki-wrapper").html(wikiOutput);
+
+    //    display youtube data
+    getYoutubeResults(oneDetail[0]);
+
+}
+
+
+//used for youtube API call
+function getYoutubeResults(userSearchTerm) {
+    $.getJSON("https://www.googleapis.com/youtube/v3/search", {
+            part: "snippet",
+            key: "AIzaSyBoG71V0P4gwy5i7TvDPV9JSJAdokte3NI",
+            maxResults: 3,
+            type: "video"
+        },
+
+        function (receivedApiData) {
+            console.log(receivedApiData);
+            if (receivedApiData.pageInfo.totalResults == 0) {
+                alert("No videos found!");
+            } else {
+                displayYoutubeResults(receivedApiData.items);
+            }
+        });
+}
+//display youtube API results
+function displayYoutubeResults(videosArray) {
+    var buildTheHtmlOutput = "";
+
+    $.each(videosArray, function (videosArrayKey, videosArrayValue) {
+        buildTheHtmlOutput += "<li>";
+        buildTheHtmlOutput += "<p>" + videosArrayValue.snippet.title + "</p>";
+        buildTheHtmlOutput += "<a href='https://www.youtube.com/watch?v=" + videosArrayValue.id.videoId + "' target='_blank'>";
+        buildTheHtmlOutput += "<img src='" + videosArrayValue.snippet.thumbnails.high.url + "'/>";
+        buildTheHtmlOutput += "</a>";
+        buildTheHtmlOutput += "</li>";
+    });
+    $("#slide .youtube-wrapper").html(buildTheHtmlOutput);
 }
 
 

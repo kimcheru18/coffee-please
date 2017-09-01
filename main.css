@@ -173,11 +173,14 @@ main .intro {
 
 /*more styles for coffee-type, description, details, image??*/
 
+
+/*
 #wiki-search {
     text-align: center;
     font-size: 1.25rem;
     margin-top: 30px;
 }
+*/
 
 .click-here {
     font-size: 1rem;
@@ -215,6 +218,14 @@ main .intro {
 
 .popup_visible #slide {
     transform: translateX(0) translateY(0);
+}
+
+#slide li {
+    vertical-align: middle;
+    display: inline-block;
+    width: 28%;
+    /*    float: left;*/
+    margin: 0 5px;
 }
 
 
