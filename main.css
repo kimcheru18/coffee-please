@@ -1,257 +1,257 @@
-/*
+        /*
 The CSS code gets to executed from top to bottom and left ro right
 
 Basic rules to write CSS
 - write GENERAL rules first (for all the paragraph tags in the website for example) and only after that write CSS for SPECIFIC tags (for example the paragraph tags inside the footer)
 - write the css styles to define for the parent (outside) container and THEN the children (inside containers) of that parent and THEN the children (inside containers) of the child above
 */
-
-
-/* -------------------------------------
+        /* -------------------------------------
 CSS reset
 Is a short set of CSS rules that resets the styling of all HTML elements to a consistent baseline so the website will look the same on all browsers
 */
 
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
-    box-sizing: border-box;
-    /*reset Chrome user agent styles*/
-    -webkit-margin-before: 0px;
-    -webkit-margin-after: 0px;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-before: 0px;
-    -webkit-padding-after: 0px;
-    -webkit-padding-start: 0px;
-    -webkit-padding-end: 0px;
-    /*reset Firefox user agent styles*/
-    -moz-margin-before: 0px;
-    -moz-margin-after: 0px;
-    -moz-margin-start: 0px;
-    -moz-margin-end: 0px;
-    -moz-padding-before: 0px;
-    -moz-padding-after: 0px;
-    -moz-padding-start: 0px;
-    -moz-padding-end: 0px;
-    /*reset Internet Explorer user agent styles*/
-    -ms-margin-before: 0px;
-    -ms-margin-after: 0px;
-    -ms-margin-start: 0px;
-    -ms-margin-end: 0px;
-    -ms-padding-before: 0px;
-    -ms-padding-after: 0px;
-    -ms-padding-start: 0px;
-    -ms-padding-end: 0px;
-    /*reset Opera user agent styles*/
-    -o-margin-before: 0px;
-    -o-margin-after: 0px;
-    -o-margin-start: 0px;
-    -o-margin-end: 0px;
-    -o-padding-before: 0px;
-    -o-padding-after: 0px;
-    -o-padding-start: 0px;
-    -o-padding-end: 0px;
-}
-
-
-/* -------------------------------------
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+            box-sizing: border-box;
+            /*reset Chrome user agent styles*/
+            -webkit-margin-before: 0px;
+            -webkit-margin-after: 0px;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            -webkit-padding-before: 0px;
+            -webkit-padding-after: 0px;
+            -webkit-padding-start: 0px;
+            -webkit-padding-end: 0px;
+            /*reset Firefox user agent styles*/
+            -moz-margin-before: 0px;
+            -moz-margin-after: 0px;
+            -moz-margin-start: 0px;
+            -moz-margin-end: 0px;
+            -moz-padding-before: 0px;
+            -moz-padding-after: 0px;
+            -moz-padding-start: 0px;
+            -moz-padding-end: 0px;
+            /*reset Internet Explorer user agent styles*/
+            -ms-margin-before: 0px;
+            -ms-margin-after: 0px;
+            -ms-margin-start: 0px;
+            -ms-margin-end: 0px;
+            -ms-padding-before: 0px;
+            -ms-padding-after: 0px;
+            -ms-padding-start: 0px;
+            -ms-padding-end: 0px;
+            /*reset Opera user agent styles*/
+            -o-margin-before: 0px;
+            -o-margin-after: 0px;
+            -o-margin-start: 0px;
+            -o-margin-end: 0px;
+            -o-padding-before: 0px;
+            -o-padding-after: 0px;
+            -o-padding-start: 0px;
+            -o-padding-end: 0px;
+        }
+        /* -------------------------------------
 General styles (General Module, wrapping around the modules bellow)
 (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
 */
 
-body {
-    background: -webkit-linear-gradient(left, orange, white);
-}
-
-
-/* -------------------------------------
+        body {
+            background: -webkit-linear-gradient(left, orange, white);
+        }
+        /* -------------------------------------
 Header styles (Main Module)
 (all the styles inside the < header > or < nav > tags)
 */
 
-#coffee-header {
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 30px 0;
-}
+        #coffee-header {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 30px 0;
+        }
 
-.header-flag-images {
-    height: 29px;
-    margin-left: 1rem;
-    margin-right: .5rem;
-    vertical-align: middle;
-}
-
-
-/* -------------------------------------
+        .header-flag-images {
+            height: 29px;
+            margin-left: 1rem;
+            margin-right: .5rem;
+            vertical-align: middle;
+        }
+        /* -------------------------------------
 Content styles (Main Module)
 (all the styles inside the < sections > or < aside > tags)
 */
 
-main .intro {
-    text-align: center;
-    font-family: 'Marck Script', cursive;
-    font-size: 2rem;
-}
+        main .intro {
+            text-align: center;
+            font-family: 'Marck Script', cursive;
+            font-size: 2rem;
+        }
 
-#coffee-selection-wrapper {
-    width: 60%;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
+        #coffee-selection-wrapper {
+            width: 60%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-#coffee-selection-wrapper li {
-    margin: 1%;
-    padding: 1rem;
-    width: 48%;
-    display: inline-block;
-    vertical-align: top;
-    border: 1px solid grey;
-    border-radius: 5px;
-}
+        #coffee-selection-wrapper li {
+            margin: 1%;
+            padding: 1rem;
+            width: 48%;
+            display: inline-block;
+            vertical-align: top;
+            border: 1px solid grey;
+            border-radius: 5px;
+        }
 
+        .coffee-name,
+        .coffee-description,
+        .coffee-location,
+        .coffee-details {
+            margin-top: 5px;
+            padding: 10px 0;
+        }
 
-/*
-.radio {
-    transform: scale(2);
-    margin-right: 1rem;
-    background-color: aliceblue;
-}
-*/
+        .coffee-description,
+        .coffee-location,
+        .coffee-details {
+            font-family: 'Marck Script', cursive;
+        }
 
-.coffee-name,
-.coffee-description,
-.coffee-location,
-.coffee-details {
-    margin-top: 5px;
-    padding: 10px 0;
-}
+        .coffee-description {
+            font-size: 1.4rem;
+        }
 
-.coffee-description,
-.coffee-location,
-.coffee-details {
-    font-family: 'Marck Script', cursive;
-}
+        .coffee-location {
+            font-size: 1.75rem;
+        }
 
-.coffee-description {
-    font-size: 1.4rem;
-}
+        .coffee-name {
+            font-family: 'Cinzel Decorative', cursive;
+            font-weight: bold;
+        }
 
-.coffee-location {
-    font-size: 1.75rem;
-}
+        .coffee-image {
+            float: right;
+            width: 40%;
+            height: 200px;
+            margin: 5px;
+            margin-left: 1rem;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px #666;
+        }
 
-.coffee-name {
-    font-family: 'Cinzel Decorative', cursive;
-    font-weight: bold;
-}
+        .coffee-description {
+            height: 200px;
+            overflow-y: auto;
+        }
+        /*more styles for coffee-type, description, details, image??*/
+        /*jquery pop-up styles*/
 
-.coffee-image {
-    float: right;
-    width: 40%;
-    height: 200px;
-    margin: 5px;
-    margin-left: 1rem;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px #666;
-}
+        .well {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: none;
+            margin: 1em;
+            max-width: 800px;
+        }
 
-.coffee-description {
-    height: 200px;
-    overflow-y: auto;
-}
+        #slide h4 {
+            text-align: center;
+        }
 
+        #slide_background {
+            transition: all 0.3s 0.3s;
+        }
 
-/*more styles for coffee-type, description, details, image??*/
+        #slide,
+        #slide_wrapper {
+            transition: all 0.3s ease-out;
+        }
 
+        #slide {
+            transform: translateX(0) translateY(-40%);
+            /*    margin-top: 4rem;*/
+        }
 
-/*
-#wiki-search {
-    text-align: center;
-    font-size: 1.25rem;
-    margin-top: 30px;
-}
-*/
+        .popup_visible #slide {
+            transform: translateX(0) translateY(0);
+        }
 
-.click-here {
-    font-size: 1rem;
-    font-family: 'Cinzel Decorative', cursive;
-    color: black;
-    font-weight: 800;
-    background-color: aliceblue;
-    border-radius: 10px;
-    padding: 7px;
-    margin-top: 10px;
-}
+        .google-map-wrapper {
+            text-align: center;
+        }
 
+        #slide .google-map {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 2rem;
+        }
 
-/*jquery pop-up styles*/
+        #slide p {
+            text-align: center;
+            margin-top: 2rem;
+            border-bottom: 1px solid black;
+            margin-right: 2rem;
+        }
 
-.well {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    display: none;
-    margin: 1em;
-}
+        #slide .youtube-wrapper {
+            list-style: none;
+            text-align: center;
+        }
 
-#slide_background {
-    transition: all 0.3s 0.3s;
-}
+        #slide .youtube-item {
+            display: inline-block;
+            width: 45%;
+            text-align: center;
+        }
 
-#slide,
-#slide_wrapper {
-    transition: all 0.3s ease-out;
-}
+        #slide img {
+            display: inline-block;
+            max-width: 80%;
+            border-radius: 10px;
+        }
 
-#slide {
-    transform: translateX(0) translateY(-40%);
-    margin-top: 4rem;
-}
+        #slide .btn {
+            display: block;
+            margin: 0 auto;
+            font-size: 2rem;
+            clear: left;
+        }
 
-.popup_visible #slide {
-    transform: translateX(0) translateY(0);
-}
-
-#slide li {
-    vertical-align: middle;
-    display: inline-block;
-    width: 28%;
-    /*    float: left;*/
-    margin: 0 5px;
-}
-
-
-/* -------------------------------------
+        #slide-wrapper .make-it,
+        #slide .word-standout {
+            font-family: 'Miltonian Tattoo', cursive;
+            color: rgb(148, 0, 4);
+        }
+        /* -------------------------------------
 Footer styles (Main Module)
 (all the styles inside the < footer > tag)
 */
 
-footer {
-    font-family: 'Marck Script', cursive;
-    text-align: center;
-    margin-top: 75px;
-    padding-bottom: 30px;
-}
+        footer {
+            font-family: 'Marck Script', cursive;
+            text-align: center;
+            margin-top: 75px;
+            padding-bottom: 30px;
+        }
 
-footer p {
-    font-size: 1.5rem;
-}
+        footer p {
+            font-size: 1.5rem;
+        }
 
-footer a {
-    color: brown;
-    text-decoration: none;
-}
-
-
-/* -------------------------------------
+        footer a {
+            color: brown;
+            text-decoration: none;
+        }
+        /* -------------------------------------
 place all the desktop styles above this line
 
 Responsive styles

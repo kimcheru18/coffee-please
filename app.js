@@ -229,12 +229,13 @@ function updateSlideContent(coffeeDetails) {
 
 
 //used for youtube API call
-function getYoutubeResults(userSearchTerm) {
+function getYoutubeResults(makeCoffee) {
     $.getJSON("https://www.googleapis.com/youtube/v3/search", {
             part: "snippet",
             key: "AIzaSyBoG71V0P4gwy5i7TvDPV9JSJAdokte3NI",
-            maxResults: 3,
-            type: "video"
+            maxResults: 4,
+            type: "video",
+            q: makeCoffee
         },
 
         function (receivedApiData) {
@@ -251,12 +252,12 @@ function displayYoutubeResults(videosArray) {
     var buildTheHtmlOutput = "";
 
     $.each(videosArray, function (videosArrayKey, videosArrayValue) {
-        buildTheHtmlOutput += "<li>";
+        buildTheHtmlOutput += "<div class='youtube-item'>";
         buildTheHtmlOutput += "<p>" + videosArrayValue.snippet.title + "</p>";
         buildTheHtmlOutput += "<a href='https://www.youtube.com/watch?v=" + videosArrayValue.id.videoId + "' target='_blank'>";
         buildTheHtmlOutput += "<img src='" + videosArrayValue.snippet.thumbnails.high.url + "'/>";
         buildTheHtmlOutput += "</a>";
-        buildTheHtmlOutput += "</li>";
+        buildTheHtmlOutput += "</div>";
     });
     $("#slide .youtube-wrapper").html(buildTheHtmlOutput);
 }
