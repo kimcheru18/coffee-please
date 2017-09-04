@@ -55,8 +55,8 @@ Is a short set of CSS rules that resets the styling of all HTML elements to a co
             -o-padding-end: 0px;
         }
         /* -------------------------------------
-General styles (General Module, wrapping around the modules bellow)
-(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+General styles (General Module, wrapping around the modules below)
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules below (h2, h3, h4, h5, h6, p, a, ul, li))
 */
 
         body {
@@ -69,7 +69,6 @@ Header styles (Main Module)
 
         h1,
         #coffee-header {
-            /*            font-family: 'Cinzel Decorative', cursive;*/
             font-family: 'Miltonian Tattoo', cursive;
             color: rgb(148, 0, 4);
             text-align: center;
@@ -124,10 +123,6 @@ Content styles (Main Module)
             font-family: 'Miltonian Tattoo', cursive;
             color: rgb(148, 0, 4);
             font-size: 2.5rem;
-            /*
-    font-family: 'Cinzel Decorative', cursive;
-    font-weight: bold;
-*/
         }
 
         .coffee-name,
@@ -169,18 +164,27 @@ Content styles (Main Module)
         /*more styles for coffee-type, description, details, image??*/
         /*jquery pop-up styles*/
 
-        .well {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            display: none;
-            margin: 1em;
-            max-width: 800px;
+        .well,
+        #slide h4,
+        .google-map-wrapper,
+        #slide p,
+        #slide .youtube-wrapper,
+        #slide .youtube-item {
             text-align: center;
         }
 
-        #slide h4 {
+        .well {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin: 1em;
+        }
+
+        #slide h4,
+        #slide .bold-word {
             font-family: 'Miltonian Tattoo', cursive;
             color: rgb(148, 0, 4);
-            text-align: center;
+        }
+
+        #slide h4 {
             font-size: 3rem;
         }
 
@@ -195,28 +199,23 @@ Content styles (Main Module)
 
         #slide {
             transform: translateX(0) translateY(-40%);
-            /*    margin-top: 4rem;*/
         }
 
         .popup_visible #slide {
             transform: translateX(0) translateY(0);
         }
 
-        .google-map-wrapper {
+        .google-map-wrapper,
+        #slide p,
+        #slide .btn {
             font-family: 'Oswald', sans-serif;
-            text-align: center;
         }
 
         #slide .google-map {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
             font-size: 2.6rem;
         }
 
         #slide p {
-            font-family: 'Oswald', sans-serif;
-            text-align: center;
             margin-top: 2rem;
             border-bottom: 1px solid black;
             margin-right: 2rem;
@@ -226,17 +225,14 @@ Content styles (Main Module)
 
         #slide .youtube-wrapper {
             list-style: none;
-            text-align: center;
         }
 
         #slide .youtube-item {
             display: block;
             width: 100%;
-            text-align: center;
         }
 
         #slide img {
-            display: block;
             max-width: 80%;
             margin: 0 auto;
             border-radius: 10px
@@ -248,14 +244,10 @@ Content styles (Main Module)
 
         #slide .btn {
             display: block;
-            margin: 0 auto;
+            margin-top: 2rem;
+            margin-left: auto;
+            margin-right: auto;
             font-size: 2rem;
-            clear: left;
-        }
-
-        #slide .bold-word {
-            font-family: 'Miltonian Tattoo', cursive;
-            color: rgb(148, 0, 4);
         }
         /* -------------------------------------
 Footer styles (Main Module)
@@ -288,31 +280,31 @@ place all the mobile tables styles bellow this line
 
         @media only screen and (max-width: 1200px) {
             #coffee-selection-wrapper {
-                width: 70%
+                display: block;
+                width: 70%;
             }
-            .slide_open,
-            .coffee-image {
+            .coffee-selection-wrapper li {
                 display: block;
                 width: 100%;
+                margin: 0 auto;
+            }
+            .coffee-image {
+                display: block;
+                width: 90%;
+                margin-top: 1rem;
+                margin-left: auto;
+                margin-right: auto;
+                float: none;
             }
         }
 
-        @media only screen and (max-width: 1000px) {
-            #coffee-selection-wrapper {
-                width: 80%;
-            }
-            #coffee-selection-wrapper li {
-                display: block;
-                width: 100%;
-            }
+        @media only screen and (max-width: 800px) {
             #coffee-header {
                 font-size: 1.75rem;
             }
-            .well {
-                max-width: 500px;
-            }
-            #slide .google-map {
-                /*                ?????*/
+            #coffee-selection-wrapper li {
+                /*                display: block;*/
+                width: 90%;
             }
         }
 
@@ -323,9 +315,4 @@ place all the mobile tables styles bellow this line
             main .intro {
                 font-size: 2.5rem;
             }
-            .youtube-item {
-                display: block;
-                width: 100%;
-            }
-            #slide img {}
         }

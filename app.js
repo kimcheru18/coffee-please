@@ -219,10 +219,6 @@ function updateSlideContent(coffeeDetails) {
     var mapOutput = '<iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDlI_svxqzPA4F944kcyUEnC6-roh51lfc &q=' + oneDetail[1] + '" allowfullscreen></iframe>';
     $("#slide .google-map-wrapper").html(mapOutput);
 
-    //    display wikipedia data
-    //    $("#slide .wiki-wrapper").html(wikiOutput);
-
-    //    display youtube data
     getYoutubeResults(oneDetail[0]);
 
 }
@@ -262,11 +258,6 @@ function displayYoutubeResults(videosArray) {
     });
     $("#slide .youtube-wrapper").html(buildTheHtmlOutput);
 }
-
-//to make wikipedia API call
-//function getWikipediaResults(coffeeHistory) {
-//    $
-//}
 
 //STEP 2 using the objects and functions (triggers)
 
