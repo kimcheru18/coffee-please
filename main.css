@@ -67,13 +67,18 @@ Header styles (Main Module)
 (all the styles inside the < header > or < nav > tags)
 */
 
+        h1,
         #coffee-header {
             /*            font-family: 'Cinzel Decorative', cursive;*/
             font-family: 'Miltonian Tattoo', cursive;
             color: rgb(148, 0, 4);
-            font-size: 2.5rem;
             text-align: center;
+        }
+
+        #coffee-header {
+            font-size: 2.5rem;
             padding: 30px 0;
+            line-height: 4rem;
         }
 
         .header-flag-images {
@@ -90,7 +95,7 @@ Content styles (Main Module)
         main .intro {
             text-align: center;
             font-family: 'Marck Script', cursive;
-            font-size: 2rem;
+            font-size: 3rem;
         }
 
         #coffee-selection-wrapper {
@@ -118,7 +123,7 @@ Content styles (Main Module)
         .coffee-name {
             font-family: 'Miltonian Tattoo', cursive;
             color: rgb(148, 0, 4);
-            font-size: 2rem;
+            font-size: 2.5rem;
             /*
     font-family: 'Cinzel Decorative', cursive;
     font-weight: bold;
@@ -206,7 +211,7 @@ Content styles (Main Module)
             display: block;
             margin-left: auto;
             margin-right: auto;
-            font-size: 2rem;
+            font-size: 2.6rem;
         }
 
         #slide p {
@@ -216,6 +221,7 @@ Content styles (Main Module)
             border-bottom: 1px solid black;
             margin-right: 2rem;
             margin-left: 2rem;
+            font-size: 2rem;
         }
 
         #slide .youtube-wrapper {
@@ -224,15 +230,16 @@ Content styles (Main Module)
         }
 
         #slide .youtube-item {
-            display: inline-block;
-            width: 45%;
+            display: block;
+            width: 100%;
             text-align: center;
         }
 
         #slide img {
-            display: inline-block;
+            display: block;
             max-width: 80%;
-            border-radius: 10px;
+            margin: 0 auto;
+            border-radius: 10px
         }
 
         #slide img:hover {
@@ -280,6 +287,9 @@ place all the mobile tables styles bellow this line
 */
 
         @media only screen and (max-width: 1200px) {
+            #coffee-selection-wrapper {
+                width: 70%
+            }
             .slide_open,
             .coffee-image {
                 display: block;
@@ -288,6 +298,9 @@ place all the mobile tables styles bellow this line
         }
 
         @media only screen and (max-width: 1000px) {
+            #coffee-selection-wrapper {
+                width: 80%;
+            }
             #coffee-selection-wrapper li {
                 display: block;
                 width: 100%;
@@ -303,7 +316,13 @@ place all the mobile tables styles bellow this line
             }
         }
 
-        @media only screen and (min-width: 640px) {
+        @media only screen and (max-width: 640px) {
+            #coffee-selection-wrapper {
+                width: 90%;
+            }
+            main .intro {
+                font-size: 2.5rem;
+            }
             .youtube-item {
                 display: block;
                 width: 100%;
