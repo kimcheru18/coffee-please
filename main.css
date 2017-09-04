@@ -140,7 +140,7 @@ Content styles (Main Module)
         }
 
         .coffee-location {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
         }
 
         .coffee-image {
@@ -278,6 +278,14 @@ Responsive styles
 
 place all the mobile tables styles bellow this line
 */
+
+        @media only screen and (max-width: 1200px) {
+            .slide_open,
+            .coffee-image {
+                display: block;
+                width: 100%;
+            }
+        }
 
         @media only screen and (max-width: 1000px) {
             #coffee-selection-wrapper li {
