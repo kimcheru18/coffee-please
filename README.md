@@ -2,15 +2,10 @@
 
 *****Complete this section*****Thinkful (https://www.thinkful.com) First Capstone Project - App integrating with YouTube API
 
-![landing page](https://github.com/Kendallyn/capstone-national-parks-nps/blob/master/public/assets/img/github-readme-img/landingPage.png)
+![landing page]
 
-![park search page](https://github.com/Kendallyn/capstone-national-parks-nps/blob/master/public/assets/img/github-readme-img/parkSearchPage.png)
+![overlay]
 
-![results section](https://github.com/Kendallyn/capstone-national-parks-nps/blob/master/public/assets/img/github-readme-img/searchResults.png)
-
-![bucket list section](https://github.com/Kendallyn/capstone-national-parks-nps/blob/master/public/assets/img/github-readme-img/bucketListSection.png)
-
-![been there section](https://github.com/Kendallyn/capstone-national-parks-nps/blob/master/public/assets/img/github-readme-img/beenThereSection.png)
 
 ## Background
 
@@ -21,7 +16,7 @@ This app includes 20 different coffee drinks from different countries. A person 
 
 ## Working Prototype
 
-*****Complete this section*****You can access a working prototype of the app here: https://national-park-explorer.herokuapp.com/
+*****Complete this section*****You can access a working prototype of the app here:
 
 ## Functionality
 The app's functionality includes:
