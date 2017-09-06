@@ -68,14 +68,19 @@ Header styles (Main Module)
 */
 
         h1,
-        #coffee-header {
+        #coffee-header,
+        .coffee-name {
             font-family: 'Miltonian Tattoo', cursive;
             color: rgb(148, 0, 4);
+        }
+
+        h1,
+        #coffee-header {
             text-align: center;
         }
 
         #coffee-header {
-            font-size: 2.5rem;
+            font-size: 2rem;
             padding: 30px 0;
             line-height: 4rem;
         }
@@ -92,8 +97,8 @@ Content styles (Main Module)
 */
 
         main .intro {
-            text-align: center;
             font-family: 'Marck Script', cursive;
+            text-align: center;
             font-size: 3rem;
         }
 
@@ -119,24 +124,21 @@ Content styles (Main Module)
             box-shadow: 5px 5px 5px grey;
         }
 
-        .coffee-name {
-            font-family: 'Miltonian Tattoo', cursive;
-            color: rgb(148, 0, 4);
-            font-size: 2rem;
+        .coffee-description,
+        .coffee-location,
+        .coffee-details {
+            font-family: 'Marck Script', cursive;
         }
 
         .coffee-name,
         .coffee-description,
-        .coffee-location,
         .coffee-details {
             margin-top: 5px;
             padding: 10px 0;
         }
 
-        .coffee-description,
-        .coffee-location,
-        .coffee-details {
-            font-family: 'Marck Script', cursive;
+        .coffee-name {
+            font-size: 2rem;
         }
 
         .coffee-location {
@@ -157,7 +159,7 @@ Content styles (Main Module)
         }
 
         .coffee-description {
-            height: 200px;
+            height: 195px;
             overflow-y: auto;
             font-size: 1.75rem;
         }

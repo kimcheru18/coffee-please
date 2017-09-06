@@ -1,4 +1,4 @@
-# coffee-search-wikipedia-api-capstone
+# coffee-search-api-capstone
 
 *****Complete this section*****Thinkful (https://www.thinkful.com) First Capstone Project - App integrating with YouTube API
 
@@ -12,7 +12,7 @@
 I really like sweet, delicious coffee and thought it would be interesting to see what kinds of coffee drinks are available around the world.
 
 ## Use Case
-This app includes 20 different coffee drinks from different countries. A person can read through the description, choose a coffee they think they may like. An overlay will then show where the coffee can be found and also two YouTube videos on how to make it.
+This app includes 20 different coffee drinks from different countries. A person can read through the descriptions, view the images and choose a coffee. An overlay will then show where the coffee can be found and also two YouTube videos on how to make it.
 
 ## Working Prototype
 
@@ -34,7 +34,7 @@ The app's functionality includes:
 <li>jQuery</li>
 </ul>
 
-The app uses AJAX JSON calls to the <a href="https://www.googleapis.com/youtube/v3/search">YouTube Videos</a> *******????????Open Platform API to return the national park search results.
+The app uses AJAX JSON calls to the <a href="https://www.googleapis.com/youtube/v3/search">YouTube Videos</a>Open Platform API to return YouTube results.
 
 ## Responsive
 App is built to be responsive across mobile, tablet, laptop, and desktop screen resolutions.
