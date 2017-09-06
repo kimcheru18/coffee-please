@@ -1,8 +1,8 @@
 # coffee-search-api-capstone
 
-*****Complete this section*****Thinkful (https://www.thinkful.com) First Capstone Project - App integrating with YouTube API
+Thinkful (https://www.thinkful.com) First Capstone Project - App integrating with YouTube API
 
-![landing page]
+![landing page] (https://github.com/Kearney/coffee-search-wikipedia-api-capstone/blob/master/public/assets/img/github-readme-img/landingPage.png)
 
 ![overlay]
 
@@ -16,7 +16,7 @@ This app includes 20 different coffee drinks from different countries. A person 
 
 ## Working Prototype
 
-*****Complete this section*****You can access a working prototype of the app here:
+You can access a working prototype of the app here: https://kimcheru18.github.io/coffee-search-wikipedia-api-capstone/
 
 ## Functionality
 The app's functionality includes:
@@ -26,28 +26,24 @@ The app's functionality includes:
 * A 'Try another flavor' button that takes one back to the main screen.
 
 ## Technology
-<h4>Front End</h4>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<li>jQuery</li>
-</ul>
+* HTML
+* CSS
+* JavaScript
+* jQuery
 
 The app uses AJAX JSON calls to the <a href="https://www.googleapis.com/youtube/v3/search">YouTube Videos</a>Open Platform API to return YouTube results.
 
 ## Responsive
 App is built to be responsive across mobile, tablet, laptop, and desktop screen resolutions.
 
-??????## Development Roadmap
+## Development Roadmap
 
 This is v1.0 of the app, but future enhancements are expected to include:
 
-* Add a notes section
-* Add ability for users to rate parks they have been to
-* Integrate in National Monuments in addition to the parks
-* Add in links to hotels and campgrounds nearby parks
+* Add list of cafe's where visiter can find these coffees
+* Add comment section for visiter to comment on their favorite coffee flavors or recommend other coffee types and cafe's
+*
+*
 
-??????## How to run it
-Use command line to navigate into the project folder and run the following in terminal
+
 
