@@ -1,21 +1,19 @@
-# coffee-search-api-capstone
-
+# Coffee-Search-Wikipedia-API-Capstone
 Thinkful (https://www.thinkful.com) First Capstone Project - App integrating with YouTube API
 
-![landing page] (https://github.com/Kearney/coffee-search-wikipedia-api-capstone/blob/master/public/assets/img/github-readme-img/landingPage.png)
+![landing page] (https://github.com/kimcheru18/coffee-search-wikipedia-api-capstone/blob/master/github_images/screenshot_landing_page.png)
 
-![overlay]
+![overlay for googlemaps] (https://github.com/kimcheru18/coffee-search-wikipedia-api-capstone/blob/master/github_images/screenshot_google-map.png)
 
+![overlay for youtube] (https://github.com/kimcheru18/coffee-search-wikipedia-api-capstone/blob/master/github_images/screenshot_youtube.png)
 
 ## Background
-
 I really like sweet, delicious coffee and thought it would be interesting to see what kinds of coffee drinks are available around the world.
 
 ## Use Case
 This app includes 20 different coffee drinks from different countries. A person can read through the descriptions, view the images and choose a coffee. An overlay will then show where the coffee can be found and also two YouTube videos on how to make it.
 
 ## Working Prototype
-
 You can access a working prototype of the app here: https://kimcheru18.github.io/coffee-search-wikipedia-api-capstone/
 
 ## Functionality
@@ -37,13 +35,6 @@ The app uses AJAX JSON calls to the <a href="https://www.googleapis.com/youtube/
 App is built to be responsive across mobile, tablet, laptop, and desktop screen resolutions.
 
 ## Development Roadmap
-
 This is v1.0 of the app, but future enhancements are expected to include:
-
 * Add list of cafe's where visiter can find these coffees
 * Add comment section for visiter to comment on their favorite coffee flavors or recommend other coffee types and cafe's
-*
-*
-
-
-
