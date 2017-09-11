@@ -205,6 +205,8 @@ Content styles (Main Module)
 
         .popup_visible #slide {
             transform: translateX(0) translateY(0);
+            max-width: 500px;
+            width: 60%;
         }
 
         .google-map-wrapper,
@@ -250,6 +252,14 @@ Content styles (Main Module)
             margin-left: auto;
             margin-right: auto;
             font-size: 2rem;
+        }
+
+        .wikipedia-wrapper h3 {
+            text-align: center;
+        }
+
+        .wikipedia-wrapper .item a {
+            text-align: justify;
         }
         /* -------------------------------------
 Footer styles (Main Module)

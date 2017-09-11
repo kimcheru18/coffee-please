@@ -220,6 +220,7 @@ function updateSlideContent(coffeeDetails) {
     $("#slide .google-map-wrapper").html(mapOutput);
 
     getYoutubeResults(oneDetail[0]);
+    getWikipediaResults(oneDetail[0]);
 
 }
 
@@ -258,6 +259,35 @@ function displayYoutubeResults(videosArray) {
     });
     $("#slide .youtube-wrapper").html(buildTheHtmlOutput);
 }
+
+//used for Wikipedia API call
+function getWikipediaResults(aboutThisCoffee) {
+    var api = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages|extracts&generator=search&plimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrlimit=10&callback=?&gsrsearch=' + encodeURIComponent(aboutThisCoffee + " coffee");
+    $.getJSON(api, {
+        "dataType": "jsonp"
+    }, displayWikipediaResults);
+    return false;
+}
+
+function displayWikipediaResults(wikipediasArray) {
+    console.log(wikipediasArray);
+    var pages = wikipediasArray['query']['pages'];
+    var pagesArr = Object.keys(pages);
+    var buildTheHtmlOutput = "<h3 class='bold-word'>Wiki Trivia</h3>";
+    for (var i = 0; i < pagesArr.length; i++) {
+        if (i < 3) {
+            buildTheHtmlOutput += '<div class="item">';
+            buildTheHtmlOutput += '<a href="https://en.wikipedia.org/?curid=' + pagesArr[i] + '" target="_blank">';
+            buildTheHtmlOutput += '<p>' + pages[pagesArr[i]].title + '<br />';
+            buildTheHtmlOutput += pages[pagesArr[i]].extract + '</p>';
+            buildTheHtmlOutput += '</a>';
+            buildTheHtmlOutput += '</div>';
+        }
+
+    }
+    $("#slide .wikipedia-wrapper").html(buildTheHtmlOutput);
+}
+
 
 //STEP 2 using the objects and functions (triggers)
 
