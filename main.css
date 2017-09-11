@@ -315,7 +315,6 @@ place all the mobile tables styles bellow this line
                 font-size: 1.75rem;
             }
             #coffee-selection-wrapper li {
-                /*                display: block;*/
                 width: 90%;
             }
         }
@@ -326,5 +325,8 @@ place all the mobile tables styles bellow this line
             }
             main .intro {
                 font-size: 2.5rem;
+            }
+            #slide .btn {
+                font-size: 1.35rem;
             }
         }
