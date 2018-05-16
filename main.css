@@ -59,55 +59,53 @@ General styles (General Module, wrapping around the modules below)
 (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules below (h2, h3, h4, h5, h6, p, a, ul, li))
 */
 
-        body {
-            background: -webkit-linear-gradient(left, orange, white);
-        }
+body {
+    background: -webkit-linear-gradient(left, orange, white);
+}
+
+
+h1,
+.coffee-name,
+footer {
+    font-family: 'Merriweather', serif;
+    color: rgb(148, 0, 4);
+}
+
+
+
+
         /* -------------------------------------
 Header styles (Main Module)
 (all the styles inside the < header > or < nav > tags)
 */
+#coffee-header-footer {
+    height: 100px;
+    background-image: url(images/header-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
 
-        h1,
-        #coffee-header,
-        .coffee-name {
-            font-family: 'Miltonian Tattoo', cursive;
-            color: rgb(148, 0, 4);
-        }
+h1,
+header .intro {
+    text-align: center;
+    padding: 0 1rem;
+}
 
-        h1,
-        #coffee-header {
-            text-align: center;
-        }
+header .intro {
+    font-size: 1.75rem;
+}
 
-        #coffee-header {
-            font-size: 2rem;
-            padding: 30px 0;
-            line-height: 4rem;
-        }
-
-        .header-flag-images {
-            height: 29px;
-            margin-left: 1rem;
-            margin-right: .5rem;
-            vertical-align: bottom;
-        }
         /* -------------------------------------
 Content styles (Main Module)
 (all the styles inside the < sections > or < aside > tags)
 */
 
-        main .intro {
-            font-family: 'Marck Script', cursive;
-            text-align: center;
-            font-size: 3rem;
-        }
-
         #coffee-selection-wrapper {
             cursor: pointer;
             width: 60%;
-            margin-top: 30px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
+            text-align:center;
         }
 
         #coffee-selection-wrapper li {
@@ -118,6 +116,7 @@ Content styles (Main Module)
             vertical-align: top;
             border: 1px solid grey;
             border-radius: 5px;
+            text-align: left;
         }
 
         #coffee-selection-wrapper li:hover {
@@ -127,7 +126,7 @@ Content styles (Main Module)
         .coffee-description,
         .coffee-location,
         .coffee-details {
-            font-family: 'Marck Script', cursive;
+            font-family: 'Dosis', sans-serif;
         }
 
         .coffee-name,
@@ -137,10 +136,7 @@ Content styles (Main Module)
             padding: 10px 0;
         }
 
-        .coffee-name {
-            font-size: 2rem;
-        }
-
+        .coffee-name,
         .coffee-location {
             font-size: 2.5rem;
         }
@@ -159,10 +155,11 @@ Content styles (Main Module)
         }
 
         .coffee-description {
-            height: 195px;
+            height: 145px;
             overflow-y: auto;
             font-size: 1.75rem;
         }
+
         /*more styles for coffee-type, description, details, image??*/
         /*jquery pop-up styles*/
 
@@ -267,20 +264,30 @@ Footer styles (Main Module)
 */
 
         footer {
-            font-family: 'Marck Script', cursive;
             text-align: center;
             margin-top: 75px;
-            padding-bottom: 30px;
         }
 
-        footer p {
-            font-size: 3rem;
+        footer p,
+        footer #links {
+            display: inline-block;
+            padding: 0 1rem;
         }
+
+        footer p,
+        footer a {
+                    font-size: 1.5rem;
+                }
 
         footer a {
-            color: brown;
+            color: #1f160d;
             text-decoration: none;
         }
+
+        footer a:hover {
+            font-weight: bolder;
+        }
+
         /* -------------------------------------
 place all the desktop styles above this line
 
