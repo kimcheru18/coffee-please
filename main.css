@@ -263,30 +263,36 @@ Footer styles (Main Module)
 (all the styles inside the < footer > tag)
 */
 
-        footer {
-            text-align: center;
-            margin-top: 75px;
-        }
 
-        footer p,
-        footer #links {
-            display: inline-block;
-            padding: 0 1rem;
-        }
+footer,
+#contact-info-ul {
+    text-align: center;
+}
 
-        footer p,
-        footer a {
-                    font-size: 1.5rem;
-                }
+footer p,
+footer a {
+    font-size: 1.5rem;
+}
 
-        footer a {
-            color: #1f160d;
-            text-decoration: none;
-        }
+#app-author,
+#contact-info-ul,
+.contact-info {
+    display: inline-block;
+    padding: .5rem;
+}
 
-        footer a:hover {
-            font-weight: bolder;
-        }
+#contact-info-ul {
+    vertical-align: middle;
+}
+
+footer a {
+    color: #1f160d;
+    text-decoration: none;
+}
+
+footer a:hover {
+    font-weight: bolder;
+}
 
         /* -------------------------------------
 place all the desktop styles above this line
