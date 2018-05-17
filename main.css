@@ -269,29 +269,27 @@ footer,
     text-align: center;
 }
 
-footer p,
-footer a {
+footer p {
     font-size: 1.5rem;
+    color: #1e0602;
 }
 
 #app-author,
 #contact-info-ul,
 .contact-info {
     display: inline-block;
-    padding: .5rem;
-}
-
-#contact-info-ul {
-    vertical-align: middle;
+    padding: 0 .5rem;
 }
 
 footer a {
-    color: #1f160d;
-    text-decoration: none;
+    color: #7b7267;
+    font-size: 2rem;
+    vertical-align: middle;
 }
 
 footer a:hover {
     font-weight: bolder;
+    color: #1e0602;
 }
 
         /* -------------------------------------
