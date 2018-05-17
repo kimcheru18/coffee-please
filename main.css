@@ -179,7 +179,8 @@ Content styles (Main Module)
 
         #slide h4,
         #slide .bold-word {
-            font-family: 'Miltonian Tattoo', cursive;
+/*            font-family: 'Miltonian Tattoo', cursive;*/
+            font-family: 'Merriweather', serif;
             color: rgb(148, 0, 4);
         }
 
@@ -249,6 +250,8 @@ Content styles (Main Module)
             margin-left: auto;
             margin-right: auto;
             font-size: 2rem;
+            box-shadow: 1px 1px 1px grey;
+            background-color: #ffae1b;
         }
 
         .wikipedia-wrapper h3 {
