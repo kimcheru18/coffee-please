@@ -204,7 +204,7 @@ Content styles (Main Module)
         .popup_visible #slide {
             transform: translateX(0) translateY(0);
             max-width: 500px;
-            width: 60%;
+            width: 80%;
         }
 
         .google-map-wrapper,
